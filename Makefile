@@ -15,8 +15,9 @@ else
   CXXFLAGS += $(UNKNOWN_CXXFLAGS)
 endif
 
-SRC_DIR = src
+SRC_DIR   = src
 BUILD_DIR = build
+OBJ       = $(patsubst src/%.cpp,build/%.o,$(SRC_DIR))
 
 vpath %.cpp $(sort $(dir $(SRC_DIR)))
 
@@ -29,9 +30,11 @@ builddir: $(BUILD_DIR)
 $(BUILD_DIR):
 	mkdir -p $@
 
-build: $(BUILD_DIR)/%.o
+build: $(OBJ)
+	@echo " OBJ = $(OBJ)"
 
 $(BUILD_DIR)/%.o: %.cpp
+	@echo " $(CXX) $(CXXFLAGS) $< -o $@"
 	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
@@ -43,3 +46,4 @@ info:
 	@echo " BUILD_DIR = $(BUILD_DIR)"
 	@echo " CXXFLAGS = $(CXXFLAGS)"
 	@echo " CXX = $(CXX)"
+	@echo " OBJ = $(OBJ)"
