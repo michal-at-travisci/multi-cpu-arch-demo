@@ -18,6 +18,8 @@ endif
 SRC_DIR = src
 BUILD_DIR = build
 
+vpath %.cpp $(SRC_DIR)
+
 .PHONY: all clean
 
 all: builddir build/%.o
