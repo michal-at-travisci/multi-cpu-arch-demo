@@ -9,3 +9,4 @@ script:
   - make demo
   - ls -la
   - cd ./build && ls -la
+  - chmod +x ./demo && ./demo
