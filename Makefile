@@ -20,7 +20,7 @@ BUILD_DIR = build
 
 .PHONY: all clean
 
-all: builddir build/demo
+all: builddir build/%.o
 
 builddir: $(BUILD_DIR)
 
