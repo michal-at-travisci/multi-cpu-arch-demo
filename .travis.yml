@@ -2,5 +2,8 @@ dist: xenial
 language: cpp
 compiler: 
   - gcc
-
+arch:
+  - ppc64le
+  - s390x
+  - amd64
 script: chmod +x ./build.sh && ./build.sh
