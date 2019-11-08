@@ -41,3 +41,5 @@ info:
 	@echo " Info..."
 	@echo " SRC_DIR = $(SRC_DIR)"
 	@echo " BUILD_DIR = $(BUILD_DIR)"
+	@echo " CXXFLAGS = $(CXXFLAGS)"
+	@echo " CXX = $(CXX)"
