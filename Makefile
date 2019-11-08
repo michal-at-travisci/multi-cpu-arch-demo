@@ -5,7 +5,7 @@ CLANG_CXXFLAGS = -DMESSAGE='"Compiled with Clang"'
 UNKNOWN_CXXFLAGS = -DMESSAGE='"Compiled with an unknown compiler"'
 
 # Grab compiler for the build using env as per https://docs.travis-ci.com/user/environment-variables/#default-environment-variables
-CXX = ${TRAVIS_COMPILER}
+# CXX = ${TRAVIS_COMPILER}
 
 ifeq ($(CXX),g++)
   CXXFLAGS += $(GCC_CXXFLAGS)
