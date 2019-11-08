@@ -6,5 +6,5 @@ compiler:
 script:
   - pwd
   - make info
-  - make all
+  - make demo
   - pwd
