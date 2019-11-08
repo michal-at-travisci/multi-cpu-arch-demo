@@ -18,7 +18,7 @@ endif
 SRC_DIR = src
 BUILD_DIR = build
 
-vpath %.cpp $(SRC_DIR)
+vpath %.cpp $(sort $(dir $(SRC_DIR)))
 
 .PHONY: all clean
 
@@ -30,9 +30,14 @@ $(BUILD_DIR):
 	mkdir -p $@
 
 build: $(BUILD_DIR)/%.o
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $< -o $@
+
+$(BUILD_DIR)/%.o: %.cpp
+	$(CXX) $(CXXFLAGS) $< -o $@
 
 clean:
 	@rm -rf $(BUILD_DIR) 
 
+info:
+	@echo " Info..."
+	@echo " SRC_DIR = $(SRC_DIR)"
+	@echo " BUILD_DIR = $(BUILD_DIR)"
