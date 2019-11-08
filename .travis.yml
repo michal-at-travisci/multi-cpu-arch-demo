@@ -3,4 +3,7 @@ language: cpp
 compiler: 
   - gcc
 
-script: make all
+script:
+  - pwd
+  - make all
+  - pwd
