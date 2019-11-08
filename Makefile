@@ -22,11 +22,11 @@ BUILD_DIR = build
 
 all: $(BUILD_DIR) $(BUILD_DIR)/%.o
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
-	$(CXX) $< -o $@
-
 $(BUILD_DIR):
 	mkdir -p $@
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+	$(CXX) $< -o $@
 
 clean:
 	@rm -rf $(BUILD_DIR) 
