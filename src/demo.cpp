@@ -1,9 +1,8 @@
 #include <iostream>
 #include <cstdlib>
-#include <string>
 
 // Environment variable name as per https://docs.travis-ci.com/user/environment-variables#default-environment-variables
-const string env_name="TRAVIS_CPU_ARCH";
+const char* env_name="TRAVIS_CPU_ARCH";
 
 int main()
 {
