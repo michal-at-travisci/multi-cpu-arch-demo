@@ -25,12 +25,6 @@ demo:
 	@echo " $(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/demo $(SRC_DIR)/demo.cpp"
 	$(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/demo $(SRC_DIR)/demo.cpp
 
-$(BUILD_DIR)/%.o: %.cpp
-	@echo " mkdir -p $@"
-	mkdir -p $@
-	@echo " $(CXX) $(CXXFLAGS) $< -c -o $@"
-	$(CXX) $(CXXFLAGS) $< -c -o $@
-
 clean:
 	@rm -rf $(BUILD_DIR) 
 
