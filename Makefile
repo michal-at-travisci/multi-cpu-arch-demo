@@ -20,7 +20,9 @@ BUILD_DIR = build
 
 .PHONY: all clean
 
-all: $(BUILD_DIR) $(BUILD_DIR)/%.o
+all: builddir $(BUILD_DIR)/%.o
+
+builddir: $(BUILD_DIR)
 
 $(BUILD_DIR):
 	mkdir -p $@
