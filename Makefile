@@ -23,17 +23,15 @@ vpath %.cpp $(sort $(dir $(SRC_DIR)))
 
 .PHONY: all clean
 
-all: builddir
+all: build
 
-builddir: $(BUILD_DIR)
-
-$(BUILD_DIR):
-	@echo " mkdir -p $@"
-	mkdir -p $@
+build: $(BUILD_DIR)/%.o
 
 $(BUILD_DIR)/%.o: %.cpp
-	@echo " $(CXX) $(CXXFLAGS) $< -o $@"
-	$(CXX) $(CXXFLAGS) $< -o $@
+        @echo " mkdir -p $@"
+	mkdir -p $@
+	@echo " $(CXX) $(CXXFLAGS) $< -c $@"
+	$(CXX) $(CXXFLAGS) $< -c $@
 
 clean:
 	@rm -rf $(BUILD_DIR) 
