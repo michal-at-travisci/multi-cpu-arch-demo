@@ -14,3 +14,22 @@ else ifeq ($(CXX),clang)
 else
   CXXFLAGS += $(UNKNOWN_CXXFLAGS)
 endif
+
+SRC_DIR = src
+BUILD_DIR = build
+
+.PHONY: all clean
+
+all: $(BUILD_DIR) $(BUILD_DIR)/%.o
+
+$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+   $(CXX) $< -o $@
+
+$(BUILD_DIR):
+    mkdir -p $@
+
+clean:
+    @rm -rf $(BUILD_DIR) 
+     
+
+
