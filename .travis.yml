@@ -7,5 +7,6 @@ script:
   - pwd
   - make info
   - make demo
+  - ls -la
   - chmod +x ./demo.out
   - ./demo.out
