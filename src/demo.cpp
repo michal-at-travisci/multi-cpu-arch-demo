@@ -8,9 +8,9 @@ int main()
 {
   int ret_code = 0;
   if (const char* env_p = std::getenv(env_name)) {
-    std::cout << "Your " << env_name << " is: " << env_p << "\n";
+    std::cout << "\n\n  Hi there, Travis CI Builder! Your " << env_name << " is: " << env_p << "\n\n";
   } else {
-    std::cout << "Didn't find env variable named: " << env_name << "\n";
+    std::cout << "\n\n :-( I'm sorry. Couldn't find env variable named: " << env_name << "\n\n";
     ret_code = 1;
   }
   
