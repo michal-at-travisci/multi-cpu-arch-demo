@@ -8,5 +8,4 @@ script:
   - make info
   - make demo
   - ls -la
-  - chmod +x ./demo.out
-  - ./demo.out
+  - cd ./build && ls -la
