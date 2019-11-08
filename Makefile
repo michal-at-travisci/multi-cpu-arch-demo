@@ -20,14 +20,14 @@ BUILD_DIR = build
 
 .PHONY: all clean
 
-all: builddir $(BUILD_DIR)/%.o
+all: builddir build/demo
 
 builddir: $(BUILD_DIR)
 
 $(BUILD_DIR):
 	mkdir -p $@
 
-$(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
+build/%.o: $(SRC_DIR)/%.cpp
 	$(CXX) $< -o $@
 
 clean:
