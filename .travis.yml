@@ -3,10 +3,4 @@ language: cpp
 compiler: 
   - gcc
 
-script:
-  - pwd
-  - make info
-  - make demo
-  - ls -la
-  - cd ./build && ls -la
-  - chmod +x ./demo && ./demo
+script: chmod +x ./build.sh && ./build.sh
