@@ -14,15 +14,16 @@ endif
 
 SRC_DIR   = src
 BUILD_DIR = build
-OBJ       = $(patsubst src/%.cpp,build/%.o,$(SRC_DIR))
 
 vpath %.cpp $(sort $(dir $(SRC_DIR)))
 
-.PHONY: all clean
+.PHONY: demo clean
 
-all: build
-
-build: $(BUILD_DIR)/%.o
+demo: 
+	@echo " mkdir -p $(BUILD_DIR)"
+	@mkdir -p $(BUILD_DIR)
+	@echo " $(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/demo $(SRC_DIR)/demo.cpp"
+	$(CXX) $(CXXFLAGS) -o $(BUILD_DIR)/demo $(SRC_DIR)/demo.cpp
 
 $(BUILD_DIR)/%.o: %.cpp
 	@echo " mkdir -p $@"
@@ -39,4 +40,3 @@ info:
 	@echo " BUILD_DIR = $(BUILD_DIR)"
 	@echo " CXXFLAGS = $(CXXFLAGS)"
 	@echo " CXX = $(CXX)"
-	@echo " OBJ = $(OBJ)"
