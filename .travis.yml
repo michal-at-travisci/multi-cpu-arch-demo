@@ -3,4 +3,4 @@ language: cpp
 compiler: 
   - gcc
   - clang
-script: build.sh
+script: make all
