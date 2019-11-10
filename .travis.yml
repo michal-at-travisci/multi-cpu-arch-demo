@@ -1,6 +1,9 @@
 os: linux
 dist: xenial
-
+arch:
+  - ppc64le
+  - s390x
+  - amd64
 language: cpp
 compiler: 
   - gcc
