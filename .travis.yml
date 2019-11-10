@@ -1,6 +1,7 @@
+os: linux
 dist: xenial
+
 language: cpp
 compiler: 
   - gcc
-
 script: chmod +x ./build.sh && ./build.sh
