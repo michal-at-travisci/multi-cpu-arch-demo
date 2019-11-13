@@ -1,8 +1,7 @@
 os: linux
 dist: xenial
 arch:
-  - arm64
-  - amd64
+  - ppc64le
 language: cpp
 compiler: 
   - gcc
