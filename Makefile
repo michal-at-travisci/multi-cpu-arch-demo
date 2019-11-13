@@ -6,7 +6,7 @@ UNKNOWN_CXXFLAGS = -DMESSAGE='"Compiled with an unknown compiler"'
 
 ifeq ($(CXX),g++)
   CXXFLAGS += $(GCC_CXXFLAGS)
-else ifeq ($(CXX),clang)
+else ifeq ($(CXX),clang++)
   CXXFLAGS += $(CLANG_CXXFLAGS)
 else
   CXXFLAGS += $(UNKNOWN_CXXFLAGS)
