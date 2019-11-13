@@ -1,8 +1,8 @@
 os: linux
 dist: xenial
-arch:
-  - ppc64le
+
 language: cpp
 compiler: 
   - gcc
+  - clang
 script: chmod +x ./build.sh && ./build.sh
