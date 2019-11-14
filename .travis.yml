@@ -1,9 +1,6 @@
 os: linux
 dist: xenial
-arch:
-  - ppc64le # IBM Power
-  - s390x   # IBM Z
-  - amd64   # regular 64-bit
+
 language: cpp
 compiler: 
   - gcc
