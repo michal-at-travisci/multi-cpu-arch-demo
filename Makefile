@@ -1,4 +1,4 @@
-CXXFLAGS = -Og -Wall -Wextra
+CXXFLAGS = -Wall -Wextra
 
 GCC_CXXFLAGS = -DMESSAGE='"Compiled with GCC"'
 CLANG_CXXFLAGS = -DMESSAGE='"Compiled with Clang"'
